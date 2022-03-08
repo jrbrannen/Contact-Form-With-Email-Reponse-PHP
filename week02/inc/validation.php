@@ -6,8 +6,8 @@
  * over 25 chars and sets appropiate error message.  Returns false if
  * string is not valid. Returns true if string is valid. 
  */
-function validateFirstName($inName){
-    global $errFirstName, $generalErrorMsg;
+function validateFirstName($inName, &$errFirstName, &$generalErrorMsg){
+    // global $errFirstName, $generalErrorMsg;
     define("MAX_FNAME_LENGTH", 15);
     $errFirstName = "*";
     $inName = filter_var($inName, FILTER_SANITIZE_STRING);

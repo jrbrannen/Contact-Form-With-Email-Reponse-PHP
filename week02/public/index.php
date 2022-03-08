@@ -43,8 +43,8 @@
                 If all fields are valid, form will process, display a success message,
                 and clear all input fields.
             */
-            if(!validateFirstName($firstName)){
-                global $validform;
+            if(!validateFirstName($firstName, $errFirstName, $generalErrorMsg)){
+                // global $validform;
                 $validform = false;
             };
             if(!validateLastName($lastName)){
